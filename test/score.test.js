@@ -27,5 +27,13 @@ describe('abcd2riskcalc', function() {
     assert.equal(abcd2risk(70, 150, 100, "Unilateral Weakness", 45, false), 5);
   });
 
+  it('should calculate 6 for abcd2 for hypertensive patient age over 60 with unilateral weakness and > 1 hour symptoms', function() {
+    assert.equal(abcd2risk(70, 150, 100, "Unilateral Weakness", 65, false), 6);
+  });
+
+  it('should calculate 7 for abcd2 for hypertensive patient age over 60 with unilateral weakness and > 1 hour symptoms and diabetes', function() {
+    assert.equal(abcd2risk(70, 150, 100, "Unilateral Weakness", 65, true), 7);
+  });
+
   // We can have more its here
 });

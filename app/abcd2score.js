@@ -1,5 +1,5 @@
-function abcd2risk(age, systolic, diastolic, clinicalFeatures) {
-  return ageScore(age) + bpScore(systolic, diastolic) + clinicalScore(clinicalFeatures);
+function abcd2risk(age, systolic, diastolic, clinicalFeatures, durationOfSymptoms) {
+  return ageScore(age) + bpScore(systolic, diastolic) + clinicalScore(clinicalFeatures) + durationScore(durationOfSymptoms);
 }
 
 function ageScore(age) {
@@ -23,10 +23,22 @@ function clinicalScore(clinicalFeatures) {
     return 0;
   }
   if (clinicalFeatures === "Speech Disturbance") {
-      return 1
+    return 1;
   }
   if (clinicalFeatures === "Unilateral Weakness") {
-    return 2
+    return 2;
+  }
+}
+
+function durationScore(durationOfSymptoms) {
+  if (durationOfSymptoms >= 60 ) {
+    return 2;
+  }
+  else if (durationOfSymptoms >= 10 ) {
+    return 1;
+  }
+  else {
+    return 0;
   }
 }
 

@@ -43,7 +43,5 @@ function durationScore(durationOfSymptoms) {
 }
 
 function diabetes(diabetic) {
-  return diabetic ? 1:0
+  return diabetic == "true" ? 1:0
 }
-
-module.exports = abcd2risk

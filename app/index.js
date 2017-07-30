@@ -9,5 +9,7 @@ $( document ).ready(function() {
     });
     console.log( "You clicked submit!" );
     console.log(values)
+    debugger
+    console.log(abcd2risk(parseInt(values.age,10), parseInt(values.systolicBP, 10), parseInt(values.diastolicBP, 10), parseInt(values.duration, 10), values.clinicalFeatures, values.diabetes))
 });
 })

@@ -54,24 +54,24 @@
               What is the systolic blood pressure?
             </label>
             <div class="input-buffer">
-              <input type="number" name="SystolicBP" class="form-control" min="0" max="300" required>
+              <input type="number" name="systolicBP" class="form-control" min="0" max="300" required>
             </div>
             <div class="form-group">
               <label for="blood-pressure" class="form-questions">
                 What is the diastolic blood pressure?
               </label>
               <div class="input-buffer">
-                <input type="number" name="DiastolicBP" class="form-control" min="0" max="200" required>
+                <input type="number" name="diastolicBP" class="form-control" min="0" max="200" required>
               </div>
             </div>
           </div>
 
             <div class="form-group">
-              <label for="Duration" class="form-questions">
+              <label for="duration" class="form-questions">
                 How long did the symptoms last?
               </label>
               <div class="input-buffer">
-                <input type="number" name="Duration" class="form-control" min="0" max="500" required>
+                <input type="number" name="duration" class="form-control" min="0" max="500" required>
               </div>
             </div>
 
@@ -93,14 +93,14 @@
             </div>
 
             <div class="form-group">
-              <label for="diabetic" class="form-questions">
+              <label for="diabetes" class="form-questions">
                 Does the patient have diabetes?
                 <div>
-                  <label for="clinicalFeatures" class="radio-inline">
-                    <input type="radio" name="clinicalFeatures" value="true"> Yes
+                  <label for="diabetes" class="radio-inline">
+                    <input type="radio" name="diabetes" value="true"> Yes
                   </label>
-                  <label for="clinicalFeatures" class="radio-inline">
-                    <input type="radio" name="clinicalFeatures" value="false"> No
+                  <label for="diabetes" class="radio-inline">
+                    <input type="radio" name="diabetes" value="false"> No
                   </label>
                 </div>
               </label>
@@ -115,6 +115,7 @@
   src="http://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
+  <script src="./abcd2score.js"></script>
   <script src="./index.js"></script>
 </body>
 </html>

@@ -16,7 +16,15 @@ describe('abcd2riskcalc', function() {
   });
 
   it('should calculate 3 for abcd2 for hypertensive patient age over 60 with speech disturbance', function() {
-    assert.equal(abcd2risk(70, 150, 100, "None", 5, false), 3);
+    assert.equal(abcd2risk(70, 150, 100, "Speech Disturbance", 5, false), 3);
+  });
+
+  it('should calculate 4 for abcd2 for hypertensive patient age over 60 with unilateral weakness', function() {
+    assert.equal(abcd2risk(70, 150, 100, "Unilateral Weakness", 5, false), 4);
+  });
+
+  it('should calculate 5 for abcd2 for hypertensive patient age over 60 with unilateral weakness and 45 min symptoms', function() {
+    assert.equal(abcd2risk(70, 150, 100, "Unilateral Weakness", 45, false), 5);
   });
 
   // We can have more its here

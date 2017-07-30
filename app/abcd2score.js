@@ -1,5 +1,5 @@
-function abcd2risk(age, systolic, diastolic) {
-  return ageScore(age) + bpScore(systolic, diastolic);
+function abcd2risk(age, systolic, diastolic, clinicalFeatures) {
+  return ageScore(age) + bpScore(systolic, diastolic) + clinicalScore(clinicalFeatures);
 }
 
 function ageScore(age) {
@@ -15,6 +15,18 @@ function bpScore(systolic, diastolic) {
     return 1;
   } else {
     return 0;
+  }
+}
+
+function clinicalScore(clinicalFeatures) {
+  if (clinicalFeatures === "None") {
+    return 0;
+  }
+  if (clinicalFeatures === "Speech Disturbance") {
+      return 1
+  }
+  if (clinicalFeatures === "Unilateral Weakness") {
+    return 2
   }
 }
 

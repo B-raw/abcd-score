@@ -19,23 +19,13 @@
       <div class="col-sm-8 col-sm-offset-2 text-center">
         <div class="panel panel-success in-column-buffer">
           <div class="panel-heading text-center">
-            <h2>Review hs-cTnI at presentation</h2>
+            <h2>ABCD2 Score Calculator</h2>
           </div>
           <div class="panel-body">
             <ul class="unstyled-list-bullet">
               <li>
                 <p>
-                  Consider Aspirin 300 mg
-                </p>
-              </li>
-              <li>
-                <p>
-                  Sub-lingual nitrate or analgesia
-                </p>
-              </li>
-              <li>
-                <p>
-                  CXR as indicated
+                  Input the patient features below and the the appropriate ABCD2 score will be returned
                 </p>
               </li>
             </ul>
@@ -43,25 +33,35 @@
         </div>
       </div>
     </div>
-
+      <h2>
+        The ABCD2 score is: <span id="patientScore">0 </span>
+      </h2>
     <div class="row text-center">
       <div class="col-sm-8 col-sm-offset-2">
         <form id="baseline-troponin-form">
           <div class="form-group">
-            <label for="baselineTroponin" class="form-questions">
-              What is the hs-cTnI concentration at presentation (ng/L)?
+            <label for="age" class="form-questions">
+              What is the Age?
             </label>
             <div class="input-buffer">
               <input type="number" name="baselineTroponin" class="form-control" min="0" max="50000" required>
             </div>
           </div>
           <div class="form-group">
-            <label for="gender" class="form-questions">
-              Patient gender
-              <a href="#patientGenderInfo" data-toggle="collapse">
-                <i class="fa fa-info-circle" aria-hidden="true"></i>
-              </a>
+            <label for="blood-pressure" class="form-questions">
+              What is the systolic blood pressure?
             </label>
+            <div class="input-buffer">
+              <input type="number" name="SystolicBP" class="form-control" min="0" max="50000" required>
+            </div>
+            <div class="form-group">
+              <label for="blood-pressure" class="form-questions">
+                What is the diastolic blood pressure?
+              </label>
+              <div class="input-buffer">
+                <input type="number" name="DiastolicBP" class="form-control" min="0" max="50000" required>
+              </div>
+            <!--
             <div>
               <label for="gender" class="radio-inline">
                 <input type="radio" name="gender" value="male"> Male
@@ -72,13 +72,14 @@
             </div>
             <p class="information-text collapse" id="patientGenderInfo">This algorithm is optimised for the Abbott high-sensitivity cardiac troponin I assay with sex-specific thresholds (16 ng/L for women, 34 ng/L for men).</p>
           </div>
+        -->
           <!-- reactively show this question if troponin is less than 5: -->
             <div class="form-group">
-              <label for="painDuration" class="form-questions">
-                Was the onset of symptoms within two hours of presentation?
-                <a href="#painDurationInfo" data-toggle="collapse">
-                  <i class="fa fa-info-circle" aria-hidden="true"></i>
-                </a>
+              <label for="Duration" class="form-questions">
+                How long did the symptoms last?
+                <div class="input-buffer">
+                  <input type="number" name="Duration" class="form-control" min="0" max="50000" required>
+                </div>
               </label>
               <div>
                 <label for="painDuration" class="radio-inline">

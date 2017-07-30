@@ -11,5 +11,9 @@ describe('abcd2riskcalc', function() {
     assert.equal(abcd2risk(70, 100, 50, "None", 5, false), 1);
   });
 
+  it('should calculate abcd2 for hypertensive patient age over 60', function() {
+    assert.equal(abcd2risk(70, 150, 100, "None", 5, false), 2);
+  });
+
   // We can have more its here
 });

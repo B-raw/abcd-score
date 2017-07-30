@@ -1,5 +1,5 @@
-function abcd2risk(age, systolic, diastolic, clinicalFeatures, durationOfSymptoms) {
-  return ageScore(age) + bpScore(systolic, diastolic) + clinicalScore(clinicalFeatures) + durationScore(durationOfSymptoms);
+function abcd2risk(age, systolic, diastolic, clinicalFeatures, durationOfSymptoms, diabetic) {
+  return ageScore(age) + bpScore(systolic, diastolic) + clinicalScore(clinicalFeatures) + durationScore(durationOfSymptoms) + diabetes(diabetic);
 }
 
 function ageScore(age) {
@@ -40,6 +40,10 @@ function durationScore(durationOfSymptoms) {
   else {
     return 0;
   }
+}
+
+function diabetes(diabetic) {
+  return diabetic ? 1:0
 }
 
 module.exports = abcd2risk

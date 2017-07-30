@@ -38,65 +38,83 @@
       </h2>
     <div class="row text-center">
       <div class="col-sm-8 col-sm-offset-2">
-        <form id="baseline-troponin-form">
+        <form id="abcd-form">
+
           <div class="form-group">
             <label for="age" class="form-questions">
               What is the Age?
             </label>
             <div class="input-buffer">
-              <input type="number" name="baselineTroponin" class="form-control" min="0" max="50000" required>
+              <input type="number" name="age" class="form-control" min="0" max="120" required>
             </div>
           </div>
+
           <div class="form-group">
             <label for="blood-pressure" class="form-questions">
               What is the systolic blood pressure?
             </label>
             <div class="input-buffer">
-              <input type="number" name="SystolicBP" class="form-control" min="0" max="50000" required>
+              <input type="number" name="SystolicBP" class="form-control" min="0" max="300" required>
             </div>
             <div class="form-group">
               <label for="blood-pressure" class="form-questions">
                 What is the diastolic blood pressure?
               </label>
               <div class="input-buffer">
-                <input type="number" name="DiastolicBP" class="form-control" min="0" max="50000" required>
+                <input type="number" name="DiastolicBP" class="form-control" min="0" max="200" required>
               </div>
-            <!--
-            <div>
-              <label for="gender" class="radio-inline">
-                <input type="radio" name="gender" value="male"> Male
-              </label>
-              <label for="gender" class="radio-inline">
-                <input type="radio" name="gender" value="female"> Female
-              </label>
             </div>
-            <p class="information-text collapse" id="patientGenderInfo">This algorithm is optimised for the Abbott high-sensitivity cardiac troponin I assay with sex-specific thresholds (16 ng/L for women, 34 ng/L for men).</p>
           </div>
-        -->
-          <!-- reactively show this question if troponin is less than 5: -->
+
             <div class="form-group">
               <label for="Duration" class="form-questions">
                 How long did the symptoms last?
-                <div class="input-buffer">
-                  <input type="number" name="Duration" class="form-control" min="0" max="50000" required>
+              </label>
+              <div class="input-buffer">
+                <input type="number" name="Duration" class="form-control" min="0" max="500" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="clinicalFeatures" class="form-questions">
+                What were the clinical features?
+                <div>
+                  <label for="clinicalFeatures" class="radio-inline">
+                    <input type="radio" name="clinicalFeatures" value="None"> None
+                  </label>
+                  <label for="clinicalFeatures" class="radio-inline">
+                    <input type="radio" name="clinicalFeatures" value="Speech Disturbance"> Speech Disturbance
+                  </label>
+                  <label for="clinicalFeatures" class="radio-inline">
+                    <input type="radio" name="clinicalFeatures" value="Unilateral Weakness"> Unilateral Weakness
+                  </label>
                 </div>
               </label>
-              <div>
-                <label for="painDuration" class="radio-inline">
-                  <input type="radio" name="painDuration" value="true"> Yes
-                </label>
-                <label for="painDuration" class="radio-inline">
-                  <input type="radio" name="painDuration" value="false"> No
-                </label>
-              </div>
-              <p class="information-text collapse" id="painDurationInfo">These patients should have a repeat hs-cTnI measured 3 hours after presentation.</p>
             </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="form-group">
+              <label for="diabetic" class="form-questions">
+                Does the patient have diabetes?
+                <div>
+                  <label for="clinicalFeatures" class="radio-inline">
+                    <input type="radio" name="clinicalFeatures" value="true"> Yes
+                  </label>
+                  <label for="clinicalFeatures" class="radio-inline">
+                    <input type="radio" name="clinicalFeatures" value="false"> No
+                  </label>
+                </div>
+              </label>
+            </div>
+          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         </form>
       </div>
     </div>
 
   </div>
-  <!-- <script src="js/scripts.js"></script> -->
+  <script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
 </body>
 </html>

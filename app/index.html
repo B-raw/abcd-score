@@ -53,7 +53,7 @@
               </label>
             </div>
             <div class="input-buffer col-sm-2 col-sm-offset-5">
-              <input type="number" name="age" class="form-control" min="0" max="120" required>
+              <input type="number" name="age" class="form-control" min="0" max="120" value="50" required>
             </div>
           </div>
 
@@ -64,7 +64,7 @@
               </label>
             </div>
             <div class="input-buffer col-sm-2 col-sm-offset-5">
-              <input type="number" name="systolicBP" class="form-control" min="0" max="300" required>
+              <input type="number" name="systolicBP" class="form-control" min="0" max="300" value="140" required>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
               </label>
             </div>
             <div class="input-buffer col-sm-2 col-sm-offset-5">
-              <input type="number" name="diastolicBP" class="form-control" min="0" max="200" required>
+              <input type="number" name="diastolicBP" class="form-control" min="0" max="200" value="90" required>
             </div>
           </div>
 
@@ -86,7 +86,7 @@
                 </label>
               </div>
               <div class="input-buffer col-sm-2 col-sm-offset-5">
-                <input type="number" name="duration" class="form-control" min="0" max="500" required>
+                <input type="number" name="duration" class="form-control" min="0" max="500" value="0" required>
               </div>
             </div>
 
@@ -95,7 +95,7 @@
                 What were the clinical features (select the correct box below)?
                 <div>
                   <label for="clinicalFeatures" class="radio-inline">
-                    <input type="radio" name="clinicalFeatures" value="None"> None
+                    <input type="radio" name="clinicalFeatures" value="None" checked="checked"> None
                   </label>
                   <label for="clinicalFeatures" class="radio-inline">
                     <input type="radio" name="clinicalFeatures" value="Speech Disturbance"> Speech Disturbance
@@ -115,12 +115,11 @@
                     <input type="radio" name="diabetes" value="true"> Yes
                   </label>
                   <label for="diabetes" class="radio-inline">
-                    <input type="radio" name="diabetes" value="false"> No
+                    <input type="radio" name="diabetes" value="false" checked="checked"> No
                   </label>
                 </div>
               </label>
             </div>
-          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         </form>
       </div>
       <div>

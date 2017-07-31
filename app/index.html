@@ -49,7 +49,7 @@
           <div class="row form-group">
             <div>
               <label for="age" class="form-questions">
-                What is the Age?
+                What is the Age in Years?
               </label>
             </div>
             <div class="input-buffer col-sm-2 col-sm-offset-5">
@@ -60,7 +60,7 @@
           <div class="row form-group">
             <div>
               <label for="blood-pressure" class="form-questions">
-                What is the systolic blood pressure?
+                What is the systolic blood pressure in mmHg (millimeters of mercury)?
               </label>
             </div>
             <div class="input-buffer col-sm-2 col-sm-offset-5">
@@ -71,7 +71,7 @@
           <div class="row form-group">
             <div>
               <label for="blood-pressure" class="form-questions">
-                What is the diastolic blood pressure?
+                What is the diastolic blood pressure in mmHg (millimeters of mercury)?
               </label>
             </div>
             <div class="input-buffer col-sm-2 col-sm-offset-5">
@@ -82,7 +82,7 @@
             <div class="row form-group">
               <div>
                 <label for="duration" class="form-questions">
-                  How long did the symptoms last?
+                  How long did the symptoms last in minutes?
                 </label>
               </div>
               <div class="input-buffer col-sm-2 col-sm-offset-5">
@@ -92,7 +92,7 @@
 
             <div class="row form-group">
               <label for="clinicalFeatures" class="form-questions">
-                What were the clinical features?
+                What were the clinical features (select the correct box below)?
                 <div>
                   <label for="clinicalFeatures" class="radio-inline">
                     <input type="radio" name="clinicalFeatures" value="None"> None
@@ -109,7 +109,7 @@
 
             <div class="form-group">
               <label for="diabetes" class="form-questions">
-                Does the patient have diabetes?
+                Does the patient have diabetes (Yes/No)?
                 <div>
                   <label for="diabetes" class="radio-inline">
                     <input type="radio" name="diabetes" value="true"> Yes
@@ -122,6 +122,32 @@
             </div>
           <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         </form>
+      </div>
+      <div>
+        <li>
+          <h2>
+        What does this score mean?
+          </h2>
+        </li>
+          <ul>
+        0-3 points: Low Risk
+        2-Day Stroke Risk: 1.0%
+        7-Day Stroke Risk: 1.2%
+        90-Day Stroke Risk: 3.1%
+          </ul>
+          <ul>
+        4-5 points: Moderate Risk
+        2-Day Stroke Risk: 4.1%
+        7-Day Stroke Risk: 5.9%
+        90-Day Stroke Risk: 9.8%
+          </ul>
+          <ul>
+        6-7 points: High Risk
+        2-Day Stroke Risk: 8.1%
+        7-Day Stroke Risk: 11.7%
+        90-Day Stroke Risk: 17.8%
+          </ul>
+        </li>
       </div>
     </div>
 
